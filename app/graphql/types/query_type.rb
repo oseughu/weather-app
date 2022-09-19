@@ -20,5 +20,8 @@ module Types
     field :city, Types::CityType, null: false do
       argument :name, String, required: true
     end
+    
+    def city
+    end
   end
 end
