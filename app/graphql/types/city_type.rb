@@ -3,8 +3,9 @@
 module Types
   class CityType < Types::BaseObject
     field :name, String
-    field :latitude, String
-    field :longitude, String
+    field :weather, String
+    field :latitude, Float
+    field :longitude, Float
     field :sunrise, String
     field :sunset, String
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
