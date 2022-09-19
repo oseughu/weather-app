@@ -1,6 +1,4 @@
 module Types
-  require 'weather_controller'
-
   class QueryType < Types::BaseObject
     # All Users
     field :users, [Types::UserType], null: false
@@ -21,14 +19,6 @@ module Types
     # Get current weather info of city
     field :city, Types::CityType, null: false do
       argument :name, String, required: true
-    end
-
-    def city(name:)
-      WeatherController.new(name:)
-
-      City.find_by(name:)
-
-      City.destroy_by(name:)
     end
   end
 end
