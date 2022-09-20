@@ -4,8 +4,8 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.subscribe.subject
   #
-  def subscribe
-    @user = params[:user]
+  def subscribe(user)
+    @user = user
 
     def convert_time(unixTime:, timezone:)
       Time.at(unixTime + timezone).gmtime.strftime('%-I:%M %p')

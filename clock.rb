@@ -1,4 +1,6 @@
 require 'clockwork'
+require './config/boot'
+require './config/environment'
 require 'active_support/time'
 
 module Clockwork
@@ -6,10 +8,9 @@ module Clockwork
     puts "Running #{job}"
   end
 
-  every(10.seconds, 'send.daily.weather') do
-    
+  every(1.day, 'send.daily.weather', at: '08:00') do
     User.all.each do |user|
-      UserMailer.with(user:).subscribe.deliver_now
+      UserMailer.with(user:).subscribe(user).deliver_later
     end
   end
 end
