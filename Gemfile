@@ -36,10 +36,12 @@ gem 'bootsnap', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem "rack-cors"
 
+gem 'clockwork'
+gem 'figaro'
 gem 'graphql'
 gem 'httparty'
-gem 'figaro'
 gem 'rspec'
+gem 'sidekiq'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -52,5 +54,3 @@ group :development do
   gem 'faker'
   gem 'graphiql-rails'
 end
-
-gem "sidekiq", "~> 6.5"

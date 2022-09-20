@@ -69,6 +69,9 @@ GEM
     bootsnap (1.13.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    clockwork (3.0.0)
+      activesupport
+      tzinfo
     concurrent-ruby (1.1.10)
     connection_pool (2.3.0)
     crass (1.0.6)
@@ -203,6 +206,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  clockwork
   debug
   faker
   figaro
@@ -213,7 +217,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.4)
   rspec
-  sidekiq (~> 6.5)
+  sidekiq
   tzinfo-data
 
 RUBY VERSION

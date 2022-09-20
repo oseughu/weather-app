@@ -20,9 +20,9 @@ module Types
     def user(id:)
       User.find(id)
     end
-    
+
     def convert_time(unixTime:, timezone:)
-      Time.at(unixTime).in_time_zone(timezone).strftime('%-I:%M %p')
+      Time.at(unixTime + timezone).gmtime.strftime('%-I:%M %p')
     end
 
     def city(name:)

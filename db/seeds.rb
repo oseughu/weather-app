@@ -9,6 +9,7 @@
 5.times do
   User.create(
     name: Faker::Name.name,
-    email: Faker::Internet.email
+    email: Faker::Internet.email,
+    city: Faker::Address.city
   )
 end

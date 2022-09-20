@@ -16,6 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_18_145857) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
+    t.string "weather"
     t.string "latitude"
     t.string "longitude"
     t.string "sunrise"
@@ -27,6 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_18_145857) do
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "name"
+    t.string "city"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
