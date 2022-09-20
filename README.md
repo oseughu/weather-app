@@ -1,24 +1,17 @@
-# README
+# Ruby on Rails Weather App (Weatherlord)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This api was built using Ruby on Rails, GraphQL and the OpenWeatherMap API. It is a simple weather app that allows users to search for the weather in any city in the world. The app also allows users to subscribe to daily weather updates for their favorite city.
 
-Things you may want to cover:
+Stack:
 
-* Ruby version
+* Ruby 3.1.2
 
-* System dependencies
+* Rails 7.0.4
 
-* Configuration
+* PostgreSQL 10
 
-* Database creation
+* GraphQL
 
-* Database initialization
+* ClockWork
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* RSpec
