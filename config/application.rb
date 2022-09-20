@@ -12,7 +12,7 @@ require 'action_mailbox/engine'
 require 'action_text/engine'
 require 'action_view/railtie'
 require 'action_cable/engine'
-require 'sprockets/railtie'
+# require 'sprockets/railtie'
 # require 'httparty'
 # require "rails/test_unit/railtie"
 
@@ -41,7 +41,7 @@ module WeatherApp
     config.session_store :cookie_store, key: '_interslice_session'
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use config.session_store, config.session_options
-    
+
     config.active_job.queue_adapter = :sidekiq
   end
 end
