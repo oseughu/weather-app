@@ -12,7 +12,7 @@ class UserMailer < ApplicationMailer
     end
 
     base_url = 'https://api.openweathermap.org/data/2.5'
-    url = "#{base_url}/weather?q=#{@user.city}&appid=#{ENV['openweathermap_key']}"
+    url = "#{base_url}/weather?q=#{@user.city}&appid=#{ENV['OPENWEATHERMAP_API_KEY']}"
     response = HTTParty.get(url)
 
     @name = response['name']

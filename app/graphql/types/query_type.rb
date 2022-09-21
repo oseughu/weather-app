@@ -26,7 +26,7 @@ module Types
     end
 
     def city(name:)
-      url = "https://api.openweathermap.org/data/2.5/weather?q=#{name}&appid=#{ENV['openweathermap_key']}"
+      url = "https://api.openweathermap.org/data/2.5/weather?q=#{name}&appid=#{ENV['OPENWEATHERMAP_API_KEY']}"
       response = HTTParty.get(url)
 
       {
