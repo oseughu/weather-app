@@ -11,9 +11,9 @@ class Mutations::EditUser < Mutations::BaseMutation
     user = User.find_by(email:)
 
     if user
-      updated_user = user.update(name:, email:, city:)
+      user.update(name:, email:, city:)
       {
-        user: updated_user,
+        user:,
         message: "User profile updated for #{email}.",
         errors: []
       }
