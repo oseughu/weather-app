@@ -8,10 +8,9 @@ module Clockwork
     puts "Running #{job}"
   end
 
-  every(1.day, 'send.daily.weather', at: '08:00') do
+  every(1.hour, 'send.daily.weather') do
     User.all.each do |user|
-      mail = UserMailer.with(user:).subscribe(user).deliver_later
-      puts mail
+      UserMailer.with(user:).subscribe(user).deliver_later
     end
   end
 end
