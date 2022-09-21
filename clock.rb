@@ -10,7 +10,7 @@ module Clockwork
 
   every(2.hours, 'send.daily.weather') do
     User.all.each do |user|
-      UserMailer.with(user:).subscribe(user).deliver_later
+      UserMailer.with(user:).subscribe(user).deliver_now
     end
   end
 end
