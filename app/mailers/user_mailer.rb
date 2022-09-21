@@ -4,6 +4,8 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.subscribe.subject
   #
+  default from: 'ose.ughu@outlook.com'
+  layout 'mailer'
   def subscribe(user)
     @user = user
 
