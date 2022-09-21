@@ -1,4 +1,3 @@
 release: bin/rails db:migrate RAILS_ENV=production 
 web: bin/rails server -p ${PORT:-3000} -e $RAILS_ENV
-worker: bundle exec sidekiq
-worker: bundle exec clockwork clock.rb
+worker: bundle exec sidekiq -C config/sidekiq.yml && bundle exec clockwork clock.rb
