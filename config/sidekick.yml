@@ -1,6 +1,2 @@
 :concurrency: 5
-:queues:
-  - default
-  - mailers
-  - high
-  - low
+:timeout: 60
