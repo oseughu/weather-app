@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe 'mutation edit user' do
   it 'updates the user details and returns a success message.' do
     user_payload = { name: 'Test User', email: 'test@test.com', city: 'Prague' }

@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe 'query get a single user' do
   it 'returns the user details' do
     response = WeatherAppSchema.execute(user_query, variables: { id: 1 })

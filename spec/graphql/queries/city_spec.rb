@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe 'query get city weather info' do
   it 'returns the city and weather info' do
     response = WeatherAppSchema.execute(city_query, variables: { name: 'Lagos' })

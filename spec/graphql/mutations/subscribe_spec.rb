@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe 'mutation subscribe' do
   it 'subscribes them to daily weather updates and returns a success message.' do
     user = { name: 'James Bond', email: 'jamesbond@gmail.com', city: 'London' }

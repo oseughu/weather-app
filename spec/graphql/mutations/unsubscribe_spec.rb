@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe 'mutation unsubscribe' do
   it 'unsubscribes them from daily weather updates and returns a successful deletion message.' do
     user = { name: 'Test User', email: 'test@test.com', city: 'Lagos' }

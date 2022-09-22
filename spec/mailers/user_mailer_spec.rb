@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe UserMailer, type: :mailer do
   describe 'daily weather update' do
     user = User.find_by(email: 'test@test.com')
