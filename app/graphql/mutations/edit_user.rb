@@ -20,8 +20,8 @@ class Mutations::EditUser < Mutations::BaseMutation
     else
       {
         user: nil,
-        message: 'User not found.',
-        errors: user.errors.full_messages
+        message: 'User not found.'
+        # errors: user.errors.full_messages
       }
     end
   end

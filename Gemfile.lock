@@ -66,9 +66,20 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     bootsnap (1.13.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    capybara (3.37.1)
+      addressable
+      matrix
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.8)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (>= 1.5, < 3.0)
+      xpath (~> 3.2)
     clockwork (3.0.0)
       activesupport
       tzinfo
@@ -105,6 +116,7 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.2)
+    matrix (0.4.2)
     method_source (1.0.0)
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
@@ -137,6 +149,7 @@ GEM
     nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     pg (1.4.3)
+    public_suffix (5.0.0)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.0)
@@ -171,12 +184,9 @@ GEM
       zeitwerk (~> 2.5)
     rake (13.0.6)
     redis (4.8.0)
+    regexp_parser (2.5.0)
     reline (0.3.1)
       io-console (~> 0.5)
-    rspec (3.11.0)
-      rspec-core (~> 3.11.0)
-      rspec-expectations (~> 3.11.0)
-      rspec-mocks (~> 3.11.0)
     rspec-core (3.11.0)
       rspec-support (~> 3.11.0)
     rspec-expectations (3.11.1)
@@ -185,7 +195,17 @@ GEM
     rspec-mocks (3.11.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
+    rspec-rails (6.0.0.rc1)
+      actionpack (>= 6.1)
+      activesupport (>= 6.1)
+      railties (>= 6.1)
+      rspec-core (~> 3.11)
+      rspec-expectations (~> 3.11)
+      rspec-mocks (~> 3.11)
+      rspec-support (~> 3.11)
     rspec-support (3.11.1)
+    shoulda-matchers (5.2.0)
+      activesupport (>= 5.2.0)
     sidekiq (6.5.6)
       connection_pool (>= 2.2.5)
       rack (~> 2.0)
@@ -205,6 +225,8 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
     zeitwerk (2.6.0)
 
 PLATFORMS
@@ -214,6 +236,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
+  capybara
   clockwork
   debug
   faker
@@ -224,7 +247,8 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
-  rspec
+  rspec-rails (~> 6.0.0.rc1)
+  shoulda-matchers (~> 5.0)
   sidekiq
   tzinfo-data
 

@@ -19,8 +19,8 @@ class Mutations::CreateSub < Mutations::BaseMutation
     else
       {
         user: nil,
-        message: 'Something went wrong.',
-        errors: user.errors.full_messages
+        message: 'User already subscribed.'
+        # errors: user.errors.full_messages
       }
     end
   end
