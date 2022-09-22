@@ -5,7 +5,7 @@ module Types
 
     # A single user
     field :user, Types::UserType, null: false do
-      argument :id, ID, required: true
+      argument :email, String, required: true
     end
 
     # Get current weather info of city
@@ -17,8 +17,8 @@ module Types
       User.all
     end
 
-    def user(id:)
-      User.find(id)
+    def user(email:)
+      User.find(email)
     end
 
     def city(name:)
