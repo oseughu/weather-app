@@ -18,7 +18,7 @@ module Types
     end
 
     def user(email:)
-      User.find(email)
+      User.find_by(email:)
     end
 
     def city(name:)
