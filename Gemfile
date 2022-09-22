@@ -51,8 +51,3 @@ group :development do
   gem 'faker'
   gem 'graphiql-rails'
 end
-
-group :test do
-  gem 'capybara'
-  gem 'shoulda-matchers', '~> 5.0'
-end
