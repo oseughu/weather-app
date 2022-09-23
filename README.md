@@ -4,7 +4,7 @@ This api was built using Ruby on Rails, GraphQL and the OpenWeatherMap API. It i
 
 ## Dependencies
 
-- Ruby 3.1.2
+- Ruby  3.1.2
 - Rails 7.0.4
 - PostgreSQL 10
 - GraphQL
