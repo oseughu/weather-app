@@ -11,8 +11,8 @@ RSpec.describe UserMailer, type: :mailer do
     end
 
     it 'renders the body' do
-      expect(mail.body.encoded).to include result[:name], result[:weather], result[:longitude], result[:latitude],
-                                           result[:sunrise], result[:sunset]
+      expect(mail.body.encoded).to include result[:name], result[:weather], result[:longitude].to_s,
+                                           result[:latitude].to_s, result[:sunrise], result[:sunset]
     end
   end
 end
