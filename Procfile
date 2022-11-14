@@ -1,3 +1,1 @@
-release: bin/rails db:migrate
-web: bin/rails server -p ${PORT:-3000} -e $RAILS_ENV
-worker: bundle exec clockwork clock.rb
+web: rake db:migrate && bin/rails server -b 0.0.0.0 -p {PORT: -3000} && bundle exec clockwork clock.rb
