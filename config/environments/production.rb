@@ -86,12 +86,12 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.active_job.queue_adapter = :sidekiq
 
-  config.action_mailer.default_url_options = { host: 'weatherlord.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'weatherlord.onrender.com' }
 
   ActionMailer::Base.smtp_settings = {
     user_name: 'apikey',
     password: ENV['SENDGRID_API_KEY'],
-    domain: 'weatherlord.herokuapp.com',
+    domain: 'weatherlord.onrender.com',
     address: 'smtp.sendgrid.net',
     port: 587,
     authentication: :plain,
