@@ -35,7 +35,7 @@ gem 'figaro'
 gem 'graphql'
 gem 'httparty'
 gem 'sidekiq'
-gem 'brevo-rails'
+gem 'brevo'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
